@@ -2,27 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Story Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Interactive Stories</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #e0e0e0;
+    }
+
+    h1 {
+      margin: 0.5em 0;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 1em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 1em 0;
+    }
+
+    a.story-link {
+      display: block;
+      text-align: center;
+      padding: 1em;
+      background-color: #ffffff;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2em;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    a.story-link:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      a.story-link {
+        font-size: 1em;
+        padding: 0.8em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>📚 My Interactive Stories</h1>
 
-  <!-- 顶部广告位 -->
-  <div id="ad-top" style="margin: 10px 0; text-align:center;">
-    <p>[Ad Placeholder - Top]</p>
-  </div>
+  <header>
+    <h1>📚 My Interactive Stories</h1>
+    <!-- Top ad placeholder -->
+    <div id="ad-top">
+      <p>[Ad Placeholder - Top]</p>
+    </div>
+  </header>
 
-  <!-- 故事列表 -->
-  <ul>
-    <li><a href="stories/story.html" target="_blank">🌲 The Forest Awakening</a></li>
-    <li><a href="stories/story2.html" target="_blank">🧪 The Lab Escape</a></li>
-    <li><a href="stories/story3.html" target="_blank">🌌 The Dream Traveler</a></li>
-  </ul>
+  <main>
+    <ul>
+      <li><a class="story-link" href="stories/story.html" target="_blank">🌲 The Forest Awakening</a></li>
+      <li><a class="story-link" href="stories/story2.html" target="_blank">🧪 The Lab Escape</a></li>
+      <li><a class="story-link" href="stories/story3.html" target="_blank">🌌 The Dream Traveler</a></li>
+    </ul>
+  </main>
 
-  <!-- 底部广告位 -->
-  <div id="ad-bottom" style="margin: 10px 0; text-align:center;">
-    <p>[Ad Placeholder - Bottom]</p>
-  </div>
+  <footer>
+    <!-- Bottom ad placeholder -->
+    <div id="ad-bottom">
+      <p>[Ad Placeholder - Bottom]</p>
+    </div>
+  </footer>
+
 </body>
 </html>
 
