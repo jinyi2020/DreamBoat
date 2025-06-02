@@ -1,33 +1,65 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Interactive Stories</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>满船清梦压星河</title>
+
+  <!-- Google Fonts: 中文 Noto Serif SC + 英文 EB Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      font-family: 'Noto Serif SC', 'EB Garamond', serif;
+      color: #f5f5f5;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
+      z-index: -1;
     }
 
     header, footer {
       text-align: center;
-      padding: 1em;
-      background-color: #e0e0e0;
+      padding: 1.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     h1 {
-      margin: 0.5em 0;
-      font-size: 2em;
+      margin: 0.2em 0;
+      font-size: 2.4em;
+      line-height: 1.4em;
+      font-family: 'Noto Serif SC', serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 span {
+      display: block;
+      font-size: 0.6em;
+      letter-spacing: 1px;
+      color: #ddd;
+      font-family: 'EB Garamond', serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
 
     main {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
-      padding: 1em;
+      padding: 2em 1em;
+      background-color: rgba(0, 0, 0, 0.3);  /* 👈 新增：加深主内容背景 */
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* 使其浮起感更强 */
     }
+
 
     ul {
       list-style: none;
@@ -35,64 +67,95 @@
     }
 
     li {
-      margin: 1em 0;
+      margin: 1.5em 0;
     }
 
     a.story-link {
       display: block;
-      text-align: center;
-      padding: 1em;
-      background-color: #ffffff;
-      border-radius: 12px;
+      padding: 1.2em;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.3); /* 深一点的透明背景 */
+      color: #fff;
       text-decoration: none;
-      color: #333;
       font-size: 1.2em;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
+      text-align: center;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 文字描边 */
     }
 
     a.story-link:hover {
-      background-color: #f0f0f0;
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.02);
+    }
+
+    .story-desc-en, .story-desc-cn {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #eeeeee;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 文字描边 */
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
       a.story-link {
         font-size: 1em;
-        padding: 0.8em;
+        padding: 1em;
       }
     }
+
+    footer a {
+      color: #f0f0f0; /* 明亮白色 */
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffdd88; /* 浅金色悬停，可自定义 */
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>My Interactive Stories</h1>
+    <h1>
+      满船清梦压星河
+      <span>A Boat of Dreams Pressing Down the Galaxy</span>
+    </h1>
     <!-- Top ad placeholder -->
-    <div id="ad-top">
-      <p>[Ad Placeholder - Top]</p>
-    </div>
+    <!-- 暂时注释掉或隐藏 -->
+    <!-- <div id="ad-top"><p>[Ad Placeholder - Top]</p></div> -->
   </header>
 
   <main>
     <ul>
-     <li id="forest-story">
-      <a class="story-link" href="stories/test.html" target="_blank">🌲 Slumber in the Forest: A Dream of Magic and Choice</a><br>
-      <a class="story-link" href="stories/Forest_03_media.html" target="_blank">🌲 眠于林中：一场关于魔法与抉择的梦</a><br>
-      <span class="story-desc-en">A wondrous journey begins in the depths of an ancient forest. You awaken in morning light, unsure if it is dream or reality—only your mind can lead the way.</span><br><br>
-      <span class="story-desc-cn">一场奇幻之旅自幽深古林悄然启程。你在晨光中醒来，却不知身在梦中或现实，唯有心念指引前路。</span>
-    </li>
-      <li><a class="story-link" href="stories/test.html" target="_blank">🧪 Test</a></li>
-      <li><a class="story-link" href="stories/story3.html" target="_blank">🌌 The Dream Traveler</a></li>
+      <hr> 
+      <li id="forest-story">
+        <a class="story-link" href="stories/Forest_03_en.html" target="_blank">🌲 Slumber in the Forest: A Dream of Magic and Choice</a>
+        <a class="story-link" href="stories/Forest_03_media.html" target="_blank">🌲 眠于林中：一场关于魔法与抉择的梦</a>
+        <span class="story-desc-en">A wondrous journey begins in the depths of an ancient forest. You awaken in morning light, unsure if it is dream or reality—only your mind can lead the way.</span>
+        <span class="story-desc-cn">一场奇幻之旅自幽深古林悄然启程。你在晨光中醒来，却不知身在梦中或现实，唯有心念指引前路。</span>
+      </li>
+      <hr>
     </ul>
   </main>
 
   <footer>
     <!-- Bottom ad placeholder -->
-    <div id="ad-bottom">
-      <p>[Ad Placeholder - Bottom]</p>
-    </div>
+    <!-- <div id="ad-bottom"><p>[Ad Placeholder - Bottom]</p></div> -->
+    <p><a href="privacy.html" target="_blank">隐私政策 / Privacy Policy</a></p>
   </footer>
 
 </body>
 </html>
-

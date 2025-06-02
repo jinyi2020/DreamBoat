@@ -130,6 +130,22 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
     background-color: rgba(255, 255, 255, 0.2);
   }
 </style>
+
+<audio id="bgm" loop>
+  <source src="../story_sounds/forest_theme.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+  document.addEventListener("click", function () {
+    const bgm = document.getElementById("bgm");
+    if (bgm.paused) {
+      bgm.play().catch(e => {
+        console.log("Autoplay error:", e);
+      });
+    }
+  }, { once: true });
+</script>
 </head>
 <body>
 	<div id="init-screen">
